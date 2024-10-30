@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link href="./css/bill_detail.css" rel="stylesheet" />
+    <link href="./css/filterdropdown.css" rel="stylesheet" />
+
+    <title>Bill Listing</title>
+  </head>
+  <body>
+    <div class="home_page">
+      <!-- Header -->
+      <div class="cheader">
+        <img src="img/logo.svg" alt="Logo" />
+        <h2>35th Legislature of United States of Virgin Island</h2>
+      </div>
+      <div class="container">
+        <p class="go-back" type="button"onclick="window.location.href='index.html';">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+          </svg>
+          &nbsp;Back
+      </p>
+        <!-- Buttons and Filters -->
+        <!-- <div class="filter_head">
+          <div class="left_sec">
+            <ul class="nav nav-tabs" id="mainTab" role="tablist">
+              <button
+                class="btn btn-primary nav-link"
+                type="button"
+                onclick="window.location.href='index.html';"
+              >
+               
+              </button>
+              <button
+                class="btn btn-secondary nav-link "
+                id="membersearch-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#membersearch-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="membersearch-tab-pane"
+                aria-selected="true"
+                onclick="window.location.href='member.html';"
+              >
+                Member Search
+              </button>
+            </ul>
+          </div>
+          <div class="right_sec">
+            <div class="ltag" id="searchTag">Member Search</div>
+
+            <div class="input_sec">
+              <div class="cinput">
+                <div class="gropuSec" id="gropuSec">
+                  <input
+                    class="mainInput"
+                    type="text"
+                    class="form-control nform-control"
+                    placeholder="Alma S Adams"
+                  />
+
+                </div>
+              </div>
+
+              <button class="btn btn-primary serchbtn">
+                <img src="img/search-line.svg" />Search
+              </button>
+            </div>
+          </div>
+        </div> -->
+        <!-- Main tab contents -->
+        <div class="tab-content" id="mainTabContent">
+          <!-- Bill-tracking-tab-content -->
+          <div
+            class="billSecTab tab-pane fade"
+            id="billtracking-tab-pane"
+            role="tabpanel"
+            aria-labelledby="billtracking-tab"
+            tabindex="0"
+          >
+            <!-- Bill-tracking Filter and Sort Section -->
+            <div class="filter_sub_head">
+              <div class="left_sec">
+                <button
+                  class="btn btn-outline-primary sfilter_btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
+                >
+                  Show Filter
+                </button>
+                <div class="pagination">
+                  <span>1-4 of 530,29</span>
+                  <button class="btn btn-outline-secondary ls">
+                    <img src="img/arrow-left-s-line.svg" />
+                  </button>
+                  <input
+                    type="text"
+                    value="1"
+                    class="form-control nform-control d-inline-block"
+                  />
+
+                  <span>of 1325 pages</span>
+                  <button class="btn btn-outline-secondary mx-2">
+                    <img src="img/arrow-right-s-line.svg" />
+                  </button>
+                </div>
+              </div>
+              <div class="right_sec">
+                <div class="view_sec">
+                  <label for="view" class="form-label">View</label>
+                  <ul class="nav nav-tabs" id="billSec-subTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link active"
+                        id="bill-grid-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#billgrid-tab-pane"
+                        type="button"
+                        role="tab"
+                        aria-controls="billgrid-tab-pane"
+                        aria-selected="true"
+                      >
+                        <img src="img/grid.svg" class="inactive" alt="grid" />
+                        <img
+                          src="img/grid-active.svg"
+                          class="active"
+                          alt="grid-active"
+                        />
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="bill-table-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#billtable-tab-pane"
+                        type="button"
+                        role="tab"
+                        aria-controls="billtable-tab-pane"
+                        aria-selected="false"
+                      >
+                        <img src="img/table.svg" class="inactive" alt="grid" />
+                        <img
+                          src="img/table-active.svg"
+                          class="active"
+                          alt="grid-active"
+                        />
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sort_sec">
+                  <label for="sort" class="form-label">Sort by</label>
+                  <select id="sort" class="form-select">
+                    <option>Number Descending</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bill-tracking -Cards -->
+
+          </div>
+          <!-- Member-Search-tab-content -->
+          <div
+            class="memberSecTab tab-pane show active"
+            id="membersearch-tab-pane"
+            role="tabpanel"
+            aria-labelledby="membersearch-tab"
+            tabindex="0"
+          >
+            <!-- Member-Search Filter and Sort Section -->
+
+            <div class="tablebackbtn">
+                <!-- <div class="legislature">
+                    <span>Legislature &nbsp;</span>
+                    <input id="legislatureVal" type="text" class="" style="width: 5%;text-align: center;" value="25" disabled="">
+                </div> -->
+                <div class="bill-table-wrapper" style="height: fit-content; width: 100%;">
+                    <table class="bill-table table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="col-md-1 ps-3">Legislature No.</th>
+                                <th scope="col" class="col-md-1 ps-3">BR No.</th>
+                                <th scope="col" class="col-md-2 ps-3">Bill No.</th>
+                                <th scope="col" class="col-md-3" style=" width: 8%;">Act No.</th>
+                                <th scope="col" class="col-md-2">Resolution No.</th>
+                                <th scope="col" class="col-md-2">Amendment No.</th>
+                                <th scope="col" class="col-md-2">Governor's No.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col-md-1 ps-3">25</td>
+                                <td class="col-md-1 ps-3">35</td>
+                                <td class="col-md-2 ps-3">35-0003</td>
+                                <td class="col-md-3">
+                                    8770
+                                </td>
+                                <td class="col-md-2 ps-1">02/10/2024</td>
+                                <td class="col-md-2 ps-1">Approved</td>
+                                <td class="col-md-2 ps-1">02/10/2024</td>                              
+                            </tr>
+                            <!-- Additional rows can be added here -->                            
+                        </tbody>
+                    </table>
+                </div>    
+            </div>
+            <br>
+            <!-- Member-Search -Cards -->
+            <div class="status_sec">
+              <div class="bill-status active">
+                Assigned <span>02/04/2024</span>
+              </div>
+              <div class="bill-status">
+                Introduced <span>02/04/2024</span>
+              </div>
+              <div class="bill-status">
+                Senator <span>02/04/2024</span>
+              </div>
+              <div class="bill-status">
+                Committee <span>02/04/2024</span>
+              </div>
+              <div class="bill-status">
+                Floor <span>02/04/2024</span>
+              </div>
+              <div class="bill-status">
+                Approved <span>02/04/2024</span>
+              </div>
+              <div class="bill-status">
+                Lt. Governor <span>02/04/2024</span>
+              </div>
+              <div class="bill-status">
+                Governor <span>02/04/2024</span>
+              </div>
+            </div>
+            <div class="member-section">
+                <div class="leftSec">
+                    <!-- Member-Search-Tab-Content -->
+                    <div class="bill-card mb-4">
+                        <ul class="nav nav-tabs nv">
+                            <li class="nav-item">
+                                <a class="nav-link active fontheadsize" id="dates-tab" aria-current="page" href="#" onclick="showTab('dates')">Bill Details</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fontheadsize" id="sponsors-tab" href="#" onclick="showTab('sponsors')">Sponsors</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fontheadsize" id="action-tab" href="#" onclick="showTab('action')">Action</a>
+                            </li>
+                        </ul>
+                        <br>
+                        <div id="dates" class="tab-content">
+                            <div class="datenumber">
+                                <label for="subject" class="fontheadsize">Subject</label>
+                                <p id="subject" class="fontdatasize">An Act appropriating funds for the adoption of various portions of the Virgin Islands Agricultural Plan...</p>
+                  
+                                <label for="committee" class="fontheadsize">Committee</label>
+                                <div id="committee">
+                                    <input type="text" id="floorAction" class="nform-control" placeholder="Last Committee  &nbsp; Committee Action">
+                                </div>
+                                
+                                <label for="floorAction" class="fontheadsize">Floor Action</label>
+                                <input type="text" id="floorAction" class="nform-control">
+                                
+                                <label for="rulesAction" class="fontheadsize">Rules Action</label>
+                                <input type="text" id="rulesAction" class="nform-control">
+                                
+                                <label for="vetoedText" class="fontheadsize">Vetoed Text</label>
+                                <input type="text" id="vetoedText" class="nform-control">
+                                
+                                <label for="overriddenText" class="fontheadsize">Overridden Text</label>
+                                <input type="text" id="overriddenText" class="nform-control">
+                            </div>
+                        </div>
+                        <div id="sponsors" class="tab-content" style="display: none;">
+                            <div class="sponsors">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="fontheadsize">Representative</th>
+                                            <th class="fontheadsize">Role</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fontdatasize">Derrick John</td>
+                                            <td class="fontdatasize">Senator</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fontdatasize">Derrick John</td>
+                                            <td class="fontdatasize">Senator</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fontdatasize">Derrick John</td>
+                                            <td class="fontdatasize">Senator</td>
+                                        </tr>                                       
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="action" class="tab-content" style="display: none;">
+                            <div class="action">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="fontheadsize">Status Recieved</th>
+                                            <th class="fontheadsize">Description</th>
+                                            <th class="fontheadsize">Committee</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fontdatasize">Pending</td>
+                                            <td class="fontdatasize">All </td>
+                                            <td class="fontdatasize">Senator</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fontdatasize">Derrick John</td>
+                                            <td class="fontdatasize">Senator</td>
+                                            <td class="fontdatasize">Senator</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fontdatasize">Derrick John</td>
+                                            <td class="fontdatasize">Senator</td>
+                                            <td class="fontdatasize">Senator</td>
+                                        </tr>                                       
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script>
+        function showTab(tabId) {
+        // Hide all tab contents
+        document.getElementById('dates').style.display = 'none';
+        document.getElementById('sponsors').style.display = 'none';
+        document.getElementById('action').style.display = 'none';
+
+        // Show the selected tab content
+        document.getElementById(tabId).style.display = 'block';
+
+        // Set active class on selected tab
+        document.querySelectorAll('.nav-link').forEach(tab => tab.classList.remove('active'));
+        document.getElementById(tabId + '-tab').classList.add('active');
+        }
+
+      $(document).ready(function () {
+        $(".datepicker").datepicker({
+          format: "mm/dd/yyyy", // Date format, you can change to your preferred format
+          autoclose: true, // Automatically close the picker after selecting a date
+          todayHighlight: true, // Highlight today’s date
+        });
+        $("#moreButton").click(function () {
+          $("#contentDiv").slideToggle();
+          $("#gropuSec").toggleClass("highlight");
+        });
+        $("#hideButton").click(function () {
+          $("#contentDiv").slideToggle();
+          $("#gropuSec").toggleClass("highlight");
+        });
+
+        // modifying content based on Main tab change
+        const myTab = document.getElementById("mainTab");
+        const moreFilterBtn = document.getElementById("moreButton");
+      });
+    </script>
+  </body>
+</html>

@@ -48,14 +48,9 @@
                 Bill Tracking
               </button>
               <button
-                class="btn btn-secondary nav-link"
-                id="membersearch-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#membersearch-tab-pane"
+                class="btn btn-primary nav-link"
                 type="button"
-                role="tab"
-                aria-controls="membersearch-tab-pane"
-                aria-selected="false"
+                onclick="window.location.href='member.html';"
               >
                 Member Search
               </button>
@@ -71,7 +66,7 @@
                     class="mainInput"
                     type="text"
                     class="form-control"
-                    placeholder="Examples: 35"
+                    placeholder="25"
                   />
                   <div id="contentDiv" class="filter-container">
                     <div class="filter_innersec">
@@ -235,6 +230,7 @@
                                 id="dateFrom"
                                 class="form-control datepicker"
                                 placeholder="Date from"
+                                style="font-size:10px"
                               />
                             </div>
                             <div class="col-6 form-control2">
@@ -243,6 +239,7 @@
                                 id="dateTo"
                                 class="form-control datepicker"
                                 placeholder="Date to"
+                                style="font-size:10px"
                               />
                             </div>
                           </div>
@@ -461,9 +458,10 @@
                 >
                   <div class="row">
                     <div class="col-md-6 mb-4">
-                      <div class="bill-card">
+                      <div class="bill-card" type="button"
+                      onclick="window.location.href='bill_detail.html';">
                         <div class="bhead">
-                          <h5>Bill No - 35-0003</h5>
+                          <h5 >Bill No - 35-0003</h5>
                           <span class="bill-badge">BILL</span>
                         </div>
                         <p>
@@ -517,7 +515,8 @@
 
                     <!-- Copy the above block to add more cards -->
                     <div class="col-md-6 mb-4">
-                      <div class="bill-card">
+                      <div class="bill-card" type="button"
+                      onclick="window.location.href='bill_detail.html';">
                         <div class="bhead">
                           <h5>Bill No - 35-0003</h5>
                           <span class="bill-badge">BILL</span>
@@ -859,425 +858,6 @@
             </div>
           </div>
           <!-- Member-Search-tab-content -->
-          <div
-            class="memberSecTab tab-pane fade"
-            id="membersearch-tab-pane"
-            role="tabpanel"
-            aria-labelledby="membersearch-tab"
-            tabindex="0"
-          >
-            <!-- Member-Search Filter and Sort Section -->
-            <div class="filter_sub_head">
-              <div class="left_sec">
-                <button
-                class="btn btn-outline-primary sfilter_btn"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-              >
-                Show Filter
-              </button>
-                <div class="pagination">
-                  <span>1-4 of 530,29</span>
-                  <button class="btn btn-outline-secondary ls">
-                    <img src="img/arrow-left-s-line.svg" />
-                  </button>
-                  <input
-                    type="text"
-                    value="1"
-                    class="form-control d-inline-block"
-                  />
-
-                  <span>of 1325 pages</span>
-                  <button class="btn btn-outline-secondary mx-2">
-                    <img src="img/arrow-right-s-line.svg" />
-                  </button>
-                </div>
-              </div>
-              <div class="right_sec">
-                <div class="view_sec">
-                  <label for="view" class="form-label">View</label>
-                  <ul
-                    class="nav nav-tabs"
-                    id="memberSearc-subtab"
-                    role="tablist"
-                  >
-                    <li class="nav-item" role="presentation">
-                      <button
-                        class="nav-link active"
-                        id="member-grid-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#membergrid-tab-pane"
-                        type="button"
-                        role="tab"
-                        aria-controls="membergrid-tab-pane"
-                        aria-selected="true"
-                      >
-                        <img src="img/grid.svg" class="inactive" alt="grid" />
-                        <img
-                          src="img/grid-active.svg"
-                          class="active"
-                          alt="grid-active"
-                        />
-                      </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button
-                        class="nav-link"
-                        id="member-table-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#membertable-tab-pane"
-                        type="button"
-                        role="tab"
-                        aria-controls="membertable-tab-pane"
-                        aria-selected="false"
-                      >
-                        <img src="img/table.svg" class="inactive" alt="grid" />
-                        <img
-                          src="img/table-active.svg"
-                          class="active"
-                          alt="grid-active"
-                        />
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-                <div class="sort_sec">
-                  <label for="sort" class="form-label">Sort by</label>
-                  <select id="sort" class="form-select">
-                    <option>Number Descending</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <!-- Member-Search -Cards -->
-            <div class="member-section">
-              <div class="leftsSec">
-                <!-- Member-Search-Member-Details -->
-                <div class="member-details">                                
-                  <img src="img/image 2.jpg" alt="" />
-                  <div class="courtsy-cnt">Representative <b>Alma S Adams</b></div>
-                  <ul>
-                    <li>
-                      <span class="label">Party</span>
-                      <span class="label-cnt">Democratic</span>
-                    </li>
-                    <li>
-                      <span class="label">Island</span>
-                      <span class="label-cnt">
-                        2436 Rayburn House Office Building (202) 225-1510
-                        <a href="#">Contact</a></span
-                      >
-                    </li>
-                    <li>
-                      <span class="label">Email</span>
-                      <span class="label-cnt">Alma.s@gmail.com</span>
-                    </li>
-                    <li>
-                      <span class="label">Telephone</span>
-                      <span class="label-cnt"> https://adams.house.gov</span>
-                    </li>
-                    <li>
-                      <span class="label">Website</span>
-                      <span class="label-cnt"> https://adams.house.gov</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="rightSec">
-                <!-- Member-Search-Tab-Content -->
-                <div class="tab-content" id="memberSearc-subtabContent">
-                  <div
-                    class="tab-pane fade show active"
-                    id="membergrid-tab-pane"
-                    role="tabpanel"
-                    aria-labelledby="membergrid-tab"
-                    tabindex="5"
-                  >
-                    <div class="bill-card mb-4">
-                      <div class="bhead">
-                        <h5>Bill No - 35-0003</h5>
-                        <span class="bill-badge">BILL</span>
-                      </div>
-                      <p>
-                        An Act appropriating funds for the adoption of various
-                        portions of the Virgin Islands Agricultural Plan,
-                        submitted by the Agricultural Plan Task Force on
-                        December 29, 2021, as the official Agricultural Plan for
-                        the Territory
-                      </p>
-                      <div class="introced">
-                        Introduced on: <span>02-27-2023</span>
-                      </div>
-                      <div class="sponce_sec">
-                        Primary Sponsor: <span>Nefranci,</span> Sponsor:
-                        <span>Nefranci,</span> <a href="#">(7)</a>,
-                        Co-sponsor: <a href="#">(0)</a><br> Act No.:
-                        <a href="#">8700</a>
-                        Amendment No.:<a href="#">4567</a>
-                        Resolution No.:<a href="#">1234</a>
-                        Governors No.:<a href="#">3986</a>
-                      </div>
-                      <div class="status_sec">
-                        <strong>Status:</strong>
-                        <div class="bill-status active">
-                          Assigned <span>02/04/2024</span>
-                        </div>
-                        <div class="bill-status">
-                          Introduced <span>02/04/2024</span>
-                        </div>
-                        <div class="bill-status">
-                          Senator <span>02/04/2024</span>
-                        </div>
-                        <div class="bill-status">
-                          Committee <span>02/04/2024</span>
-                        </div>
-                        <div class="bill-status">
-                          Floor <span>02/04/2024</span>
-                        </div>
-                        <div class="bill-status">
-                          Approved <span>02/04/2024</span>
-                        </div>
-                        <div class="bill-status">
-                          Lt. Governor <span>02/04/2024</span>
-                        </div>
-                        <div class="bill-status">
-                          Governor <span>02/04/2024</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="bill-card mb-4">
-                      <div class="bhead">
-                        <h5>Bill No - 35-0003</h5>
-                        <span class="bill-badge">BILL</span>
-                      </div>
-                      <p>
-                        An Act appropriating funds for the adoption of various
-                        portions of the Virgin Islands Agricultural Plan,
-                        submitted by the Agricultural Plan Task Force on
-                        December 29, 2021, as the official Agricultural Plan for
-                        the Territory
-                      </p>
-                      <div class="introced">
-                        Introduced on: <span>02-27-2023</span>
-                      </div>
-                      <div class="sponce_sec">
-                        Primary Sponsor: <span>Nefranci,</span> Sponsor:
-                        <span>Nefranci,</span> <a href="#">(7)</a>,
-                        Co-sponsor: <a href="#">(0)</a><br> Act No.:
-                        <a href="#">8700</a>
-                        Amendment No.:<a href="#">4567</a>
-                        Resolution No.:<a href="#">1234</a>
-                        Governors No.:<a href="#">3986</a>
-                      </div>
-                      <div class="status_sec">
-                        <strong>Status:</strong>
-                        <div class="bill-status active">
-                          Assigned <span>02/04/2024</span>
-                        </div>
-                        <div class="bill-status">
-                          Introduced <span>02/04/2024</span>
-                        </div>
-                        <div class="bill-status">
-                          Senator <span>02/04/2024</span>
-                        </div>
-                        <div class="bill-status">
-                          Committee <span>02/04/2024</span>
-                        </div>
-                        <div class="bill-status">
-                          Floor <span>02/04/2024</span>
-                        </div>
-                        <div class="bill-status">
-                          Approved <span>02/04/2024</span>
-                        </div>
-                        <div class="bill-status">
-                          Lt. Governor <span>02/04/2024</span>
-                        </div>
-                        <div class="bill-status">
-                          Governor <span>02/04/2024</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="tab-pane fade"
-                    id="membertable-tab-pane"
-                    role="tabpanel"
-                    aria-labelledby="membertable-tab"
-                    tabindex="6"
-                  >
-                    <div class="bill-table-wrapper">
-                      <table class="bill-table table table-hover">
-                        <thead>
-                          <tr>
-                            <th scope="col" class="col-md-1 ps-3">Leg. No.</th>
-                            <th scope="col" class="col-md-2 ps-3">Bill No</th>
-                            <th scope="col" class="col-md-3">Subject</th>
-                            <th scope="col" class="col-md-2">Introduced On</th>
-                            <th scope="col" class="col-md-2">Status</th>
-                            <th scope="col" class="col-md-2">
-                              Last Action Date
-                            </th>
-                          </tr>
-                        </thead>
-                      </table>
-                      <div class="table-scroll">
-                        <table class="bill-table table table-hover">
-                          <tbody>
-                            <tr>
-                              <td class="col-md-1 ps-3">35</td>
-                              <td class="col-md-2 bill-no ps-3">35-0003</td>
-                              <td class="col-md-3">
-                                An Act apprpirating $2,900,00 to the Department
-                                of Public Works for the Construction..
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                              <td class="col-md-2 ps-1 bill-status approved">
-                                Approved
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                            </tr>
-                            <tr>
-                              <td class="col-md-1 ps-3">35</td>
-                              <td class="col-md-2 bill-no ps-3">35-0003</td>
-                              <td class="col-md-3">
-                                An Act apprpirating $2,900,00 to the Department
-                                of Public Works for the Construction..
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                              <td class="col-md-2 ps-1 bill-status approved">
-                                Date Received
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                            </tr>
-                            <tr>
-                              <td class="col-md-1 ps-3">35</td>
-                              <td class="col-md-2 bill-no ps-3">35-0003</td>
-                              <td class="col-md-3">
-                                An Act apprpirating $2,900,00 to the Department
-                                of Public Works for the Construction..
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                              <td class="col-md-2 ps-1 bill-status assigned">
-                                Date Assigned
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                            </tr>
-                            <tr>
-                              <td class="col-md-1 ps-3">35</td>
-                              <td class="col-md-2 bill-no ps-3">35-0003</td>
-                              <td class="col-md-3">
-                                An Act apprpirating $2,900,00 to the Department
-                                of Public Works for the Construction..
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                              <td class="col-md-2 ps-1 bill-status overriden">
-                                Date Overridden
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                            </tr>
-                            <tr>
-                              <td class="col-md-1 ps-3">35</td>
-                              <td class="col-md-2 bill-no ps-3">35-0003</td>
-                              <td class="col-md-3">
-                                An Act apprpirating $2,900,00 to the Department
-                                of Public Works for the Construction..
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                              <td class="col-md-2 ps-1 bill-status overriden">
-                                Date Overridden
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                            </tr>
-                            <tr>
-                              <td class="col-md-1 ps-3">35</td>
-                              <td class="col-md-2 bill-no ps-3">35-0003</td>
-                              <td class="col-md-3">
-                                An Act apprpirating $2,900,00 to the Department
-                                of Public Works for the Construction..
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                              <td class="col-md-2 ps-1 bill-status overriden">
-                                Date Overridden
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                            </tr>
-                            <tr>
-                              <td class="col-md-1 ps-3">35</td>
-                              <td class="col-md-2 bill-no ps-3">35-0003</td>
-                              <td class="col-md-3">
-                                An Act apprpirating $2,900,00 to the Department
-                                of Public Works for the Construction..
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                              <td class="col-md-2 ps-1 bill-status overriden">
-                                Date Overridden
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                            </tr>
-                            <tr>
-                              <td class="col-md-1 ps-3">35</td>
-                              <td class="col-md-2 bill-no ps-3">35-0003</td>
-                              <td class="col-md-3">
-                                An Act apprpirating $2,900,00 to the Department
-                                of Public Works for the Construction..
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                              <td class="col-md-2 ps-1 bill-status overriden">
-                                Date Overridden
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                            </tr>
-                            <tr>
-                              <td class="col-md-1 ps-3">35</td>
-                              <td class="col-md-2 bill-no ps-3">35-0003</td>
-                              <td class="col-md-3">
-                                An Act apprpirating $2,900,00 to the Department
-                                of Public Works for the Construction..
-                              </td>
-                              <td class="col-md-2">02/10/2024</td>
-                              <td class="col-md-2 bill-status overriden">
-                                Date Overridden
-                              </td>
-                              <td class="col-md-2">02/10/2024</td>
-                            </tr>
-                            <tr>
-                              <td class="col-md-1 ps-3">35</td>
-                              <td class="col-md-2 bill-no ps-3">35-0003</td>
-                              <td class="col-md-3">
-                                An Act apprpirating $2,900,00 to the Department
-                                of Public Works for the Construction..
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                              <td class="col-md-2 ps-1 bill-status overriden">
-                                Date Overridden
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                            </tr>
-                            <tr>
-                              <td class="col-md-1 ps-3">35</td>
-                              <td class="col-md-2 bill-no ps-3">35-0003</td>
-                              <td class="col-md-3">
-                                An Act apprpirating $2,900,00 to the Department
-                                of Public Works for the Construction..
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                              <td class="col-md-2 ps-1 bill-status overriden">
-                                Date Overridden
-                              </td>
-                              <td class="col-md-2 ps-1">02/10/2024</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div
         class="modal fade"
         id="staticBackdrop"
