@@ -31,11 +31,8 @@
         <h2>35th Legislature of United States of Virgin Island</h2>
       </div>
       <div class="container">
-        <p class="go-back" type="button"onclick="window.location.href='index.html';">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
-          </svg>
-          &nbsp;Back
+        <p class="go-back" type="button"onclick="window.location.href='index.html';">    
+          Back
       </p>
         <!-- Buttons and Filters -->
         <!-- <div class="filter_head">
@@ -193,7 +190,7 @@
                     <span>Legislature &nbsp;</span>
                     <input id="legislatureVal" type="text" class="" style="width: 5%;text-align: center;" value="25" disabled="">
                 </div> -->
-                <div class="bill-table-wrapper" style="height: fit-content; width: 100%;">
+                <div class="bill-table-wrapper" style="height: fit-content; width: 100%; border-radius: 6px;">
                     <table class="bill-table table table-hover">
                         <thead>
                             <tr>
@@ -242,13 +239,13 @@
                 Floor <span>02/04/2024</span>
               </div>
               <div class="bill-status">
-                Approved <span>02/04/2024</span>
+                Governor <span>02/04/2024</span>
               </div>
               <div class="bill-status">
                 Lt. Governor <span>02/04/2024</span>
               </div>
               <div class="bill-status">
-                Governor <span>02/04/2024</span>
+                Approved <span>02/04/2024</span>
               </div>
             </div>
             <div class="member-section">
@@ -270,7 +267,7 @@
                         <div id="dates" class="tab-content">
                             <div class="datenumber">
                                 <label for="subject" class="fontheadsize">Subject</label>
-                                <p id="subject" class="fontdatasize">An Act appropriating funds for the adoption of various portions of the Virgin Islands Agricultural Plan...</p>
+                                <p id="subject" class="fontdatasize">Amendment to Official Zoning Map No SCZ-14 to rezone Plot No.71 Estate Castle Coakley, Queens Quarter, St. Thomas Virgin Islands from I-2 (light industry) Amendment to Official Zoning Map No SCZ-14 to rezone Plot No.71 Estate Castle Coakley, Queens Quarter, St. Thomas Virgin Islands from I-2 (light industry)</p>
                   
                                 <label for="committee" class="fontheadsize">Committee</label>
                                 <div id="committee">
@@ -291,61 +288,169 @@
                             </div>
                         </div>
                         <div id="sponsors" class="tab-content" style="display: none;">
-                            <div class="sponsors">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th class="fontheadsize">Representative</th>
-                                            <th class="fontheadsize">Role</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="fontdatasize">Derrick John</td>
-                                            <td class="fontdatasize">Senator</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fontdatasize">Derrick John</td>
-                                            <td class="fontdatasize">Senator</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fontdatasize">Derrick John</td>
-                                            <td class="fontdatasize">Senator</td>
-                                        </tr>                                       
-                                    </tbody>
-                                </table>
-                            </div>
+                          <div class="sponsors">
+                              <table class="table table-hover">
+                                  <thead">
+                                      <tr>
+                                          <th class="fontheadsize">Representative</th>
+                                          <th class="fontheadsize">Role</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody style="display: block; max-height: 200px; overflow-y: auto;">
+                                      <tr>
+                                          <td class="fontdatasize">Derrick John</td>
+                                          <td class="fontdatasize">Senator</td>
+                                      </tr>
+                                      <tr>
+                                          <td class="fontdatasize">Derrick John</td>
+                                          <td class="fontdatasize">Senator</td>
+                                      </tr>
+                                      <tr>
+                                          <td class="fontdatasize">Derrick John</td>
+                                          <td class="fontdatasize">Senator</td>
+                                      </tr>
+                                      <tr>
+                                          <td class="fontdatasize">Derrick John</td>
+                                          <td class="fontdatasize">Senator</td>
+                                      </tr>
+                                      <tr>
+                                          <td class="fontdatasize">Derrick John</td>
+                                          <td class="fontdatasize">Senator</td>
+                                      </tr>
+                                      <tr>
+                                          <td class="fontdatasize">Derrick John</td>
+                                          <td class="fontdatasize">Senator</td>
+                                      </tr>
+                                      <tr>
+                                          <td class="fontdatasize">Derrick John</td>
+                                          <td class="fontdatasize">Senator</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="fontdatasize">Derrick John</td>
+                                        <td class="fontdatasize">Senator</td>
+                                      </tr>
+                                      <tr>
+                                          <td class="fontdatasize">Derrick John</td>
+                                          <td class="fontdatasize">Senator</td>
+                                      </tr>
+                                      <tr>
+                                          <td class="fontdatasize">Derrick John</td>
+                                          <td class="fontdatasize">Senator</td>
+                                      </tr>
+                                      <tr>
+                                          <td class="fontdatasize">Derrick John</td>
+                                          <td class="fontdatasize">Senator</td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                      
+                      <div id="action" class="tab-content" style="display: none;">
+                        <div class="action">
+                            <table class="table table-hover">
+                                <tr style="position: sticky; top: 0; background-color: white; z-index: 1;">
+                                  <th class="fontheadsize">Status Received</th>
+                                  <th class="fontheadsize">Description</th>
+                                  <th class="fontheadsize">Committee</th>
+                                </tr>
+                                <tbody style="display: block; max-height: 200px; overflow-y: auto;"> 
+                                    <tr>
+                                        <td class="fontdatasize">Derrick John</td>
+                                        <td class="fontdatasize">Senator</td>
+                                        <td class="fontdatasize">Senator</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fontdatasize">Derrick John</td>
+                                        <td class="fontdatasize">Senator</td>
+                                        <td class="fontdatasize">Senator</td>
+                                    </tr>      
+                                    <tr>
+                                      <td class="fontdatasize">Derrick John</td>
+                                      <td class="fontdatasize">Senator</td>
+                                      <td class="fontdatasize">Senator</td>
+                                    </tr>    
+                                    <tr>
+                                      <td class="fontdatasize">Derrick John</td>
+                                      <td class="fontdatasize">Senator</td>
+                                      <td class="fontdatasize">Senator</td>
+                                    </tr>    
+                                    <tr>
+                                      <td class="fontdatasize">Derrick John</td>
+                                      <td class="fontdatasize">Senator</td>
+                                      <td class="fontdatasize">Senator</td>
+                                    </tr>    
+                                    <tr>
+                                      <td class="fontdatasize">Derrick John</td>
+                                      <td class="fontdatasize">Senator</td>
+                                      <td class="fontdatasize">Senator</td>
+                                    </tr>  
+                                    <tr>
+                                      <td class="fontdatasize">Derrick John</td>
+                                      <td class="fontdatasize">Senator</td>
+                                      <td class="fontdatasize">Senator</td>
+                                    </tr>    
+                                    <tr>
+                                      <td class="fontdatasize">Derrick John</td>
+                                      <td class="fontdatasize">Senator</td>
+                                      <td class="fontdatasize">Senator</td>
+                                    </tr>    
+                                    <tr>
+                                      <td class="fontdatasize">Derrick John</td>
+                                      <td class="fontdatasize">Senator</td>
+                                      <td class="fontdatasize">Senator</td>
+                                    </tr>    
+                                    <tr>
+                                      <td class="fontdatasize">Derrick John</td>
+                                      <td class="fontdatasize">Senator</td>
+                                      <td class="fontdatasize">Senator</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="fontdatasize">Derrick John</td>
+                                      <td class="fontdatasize">Senator</td>
+                                      <td class="fontdatasize">Senator</td>
+                                    </tr>    
+                                    <tr>
+                                      <td class="fontdatasize">Derrick John</td>
+                                      <td class="fontdatasize">Senator</td>
+                                      <td class="fontdatasize">Senator</td>
+                                    </tr>    
+                                    <tr>
+                                      <td class="fontdatasize">Derrick John</td>
+                                      <td class="fontdatasize">Senator</td>
+                                      <td class="fontdatasize">Senator</td>
+                                    </tr>    
+                                    <tr>
+                                      <td class="fontdatasize">Derrick John</td>
+                                      <td class="fontdatasize">Senator</td>
+                                      <td class="fontdatasize">Senator</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="fontdatasize">Derrick John</td>
+                                      <td class="fontdatasize">Senator</td>
+                                      <td class="fontdatasize">Senator</td>
+                                    </tr>    
+                                    <tr>
+                                      <td class="fontdatasize">Derrick John</td>
+                                      <td class="fontdatasize">Senator</td>
+                                      <td class="fontdatasize">Senator</td>
+                                    </tr>    
+                                    <tr>
+                                      <td class="fontdatasize">Derrick John</td>
+                                      <td class="fontdatasize">Senator</td>
+                                      <td class="fontdatasize">Senator</td>
+                                    </tr>    
+                                    <tr>
+                                      <td class="fontdatasize">Derrick John</td>
+                                      <td class="fontdatasize">Senator</td>
+                                      <td class="fontdatasize">Senator</td>
+                                    </tr>                              
+
+                                </tbody>
+                            </table>
                         </div>
-                        <div id="action" class="tab-content" style="display: none;">
-                            <div class="action">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th class="fontheadsize">Status Recieved</th>
-                                            <th class="fontheadsize">Description</th>
-                                            <th class="fontheadsize">Committee</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="fontdatasize">Pending</td>
-                                            <td class="fontdatasize">All </td>
-                                            <td class="fontdatasize">Senator</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fontdatasize">Derrick John</td>
-                                            <td class="fontdatasize">Senator</td>
-                                            <td class="fontdatasize">Senator</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fontdatasize">Derrick John</td>
-                                            <td class="fontdatasize">Senator</td>
-                                            <td class="fontdatasize">Senator</td>
-                                        </tr>                                       
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                    </div>
+                    
                     </div>
                 </div>
             </div>
